@@ -11,6 +11,17 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-92445876-1');
+
+      var trackOutboundLink = function(url) {
+        gtag('event', 'click', {
+          'event_category': 'outbound',
+          'event_label': url,
+          'transport_type': 'beacon',
+          'event_callback': function(){document.location = url;}
+        });
+      }
+
+
     </script>
   </head>
   <body>
@@ -108,6 +119,17 @@
   <li>Dietmar Bartsch (DIELINKE) <a href="http://harris.com/braulio">Officia quibusdam sit commodi molestiae quas voluptas nihil.</a></li>
   <li>Dietmar Bartsch (DIELINKE) <a href="http://weimann.info/gerhard_predovic">Sunt sit atque blanditiis quas quo.</a></li>
 </ul>
+
+      <script>
+      var external_links = document.querySelectorAll('a')
+      console.log(external_links)
+      external_links.forEach(link => {
+        var event = `trackOutboundLink(${link.href}); return false;`
+        link.addEventListener("click", event);
+        link.setAttribute("target", "_blank");
+        console.log(link)
+      })
+    </script>
 
     </div>
     <div id="sidebar">
