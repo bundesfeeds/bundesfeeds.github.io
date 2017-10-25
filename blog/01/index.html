@@ -22,8 +22,17 @@
     </script>
   </head>
   <body>
-    <div id="main">
-      
+    <body id="css-zen-garden">
+      <div class="page-wrapper">
+        <section class="intro" id="zen-intro">
+          <header role="banner">
+            <h1>Tägliche News aus dem Bundestag</h1>
+            <h2>Bundesfeeds</h2>
+          </header>
+        
+
+          <div class="preamble" id="zen-preamble" role="article">
+            
 <h1 id="blog-01---arbeitslogs">Blog 01 - Arbeitslogs</h1>
 
 <ul>
@@ -46,27 +55,40 @@
 </ul>
 
 
-      <script>
-      var external_links = document.querySelectorAll('a')
-      console.log(external_links)
-      external_links.forEach(link => {
-        var event = `trackOutboundLink(${link.href}); return false;`
-        link.addEventListener("click", event);
-        link.setAttribute("target", "_blank");
-        console.log(link)
-      })
-    </script>
+          </div>
+        </section>
+          
+ <aside class="sidebar" role="complementary">
+        <div class="wrapper">
+          <div class="design-selection" id="design-selection">
+            <h3 class="select">Navigation</h3>
+            <nav>
+              <ul>
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="/daily/heute/index.html">Heute</a>
+                </li>
+                <li>
+                  <a href="/bundestag/index.html">Abgeordnete</a>
+                </li>
+                <li>
+                  <a href="/statistik/index.html">Statistik</a>
+                </li>
+                <li>
+                  <a href="/ueber/index.html">Über</a>
+                </li>
+                <li>
+                  <a href="/impressum/index.html">Impressum</a>
+                </li>
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </aside>
 
-    </div>
-    <div id="sidebar">
-      <h2>Bundesfeeds</h2>
-      <ul>
-        <li><a href="/ueber/index.html">Über</a></li>
-        <li><a href="/impressum/index.html">Impressum</a></li>
-        <li><a href="/statistik/index.html">Statistik</a></li>
-        <li><a href="/bundestag/index.html">Bundestag</a></li>
-        <li><a href="/daily/heute/index.html">Heute</a></li>
-      </ul>
-    </div>
+      </div>
   </body>
 </html>
